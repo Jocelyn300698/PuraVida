@@ -1,18 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
 package puravida;
 
-import javax.swing.SwingUtilities;
-import vista.VentanaPrincipal;
-
 /**
- * PuraVida MiPyME Suite
- * ----------------------
- * Punto de entrada de la aplicación. 
- * Lanzamos la interfaz Swing de manera segura con SwingUtilities.
+ *
+ * @author tatia
  */
 public class PuraVida {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new VentanaPrincipal().setVisible(true);
-        });
-    }
+        // TODO code application logic here
+    // 
+    }  
 }
