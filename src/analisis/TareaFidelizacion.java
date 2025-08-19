@@ -7,8 +7,6 @@ package analisis;
 import javax.swing.SwingWorker;
 
 /**
- * TareaFidelizacion
- * -----------------
  * Representa una tarea pesada que recalcula la fidelización de clientes.
  * Usamos SwingWorker para no congelar la interfaz y poder mostrar progreso.
  */

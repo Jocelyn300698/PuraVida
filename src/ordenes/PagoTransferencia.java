@@ -6,7 +6,7 @@ package ordenes;
 
 /**
  *
- * @author tatia
+ * @author Tatiana y Jocelyn
  */
 public class PagoTransferencia implements Pago {
     private String numeroReferencia;

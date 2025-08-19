@@ -2,7 +2,6 @@ package ordenes;
 
 /**
  * Pago
- * ----
  * Estrategia base para pagos.
  * Se implementarán subclases concretas: PagoEfectivo, PagoTarjeta, PagoTransferencia.
  */

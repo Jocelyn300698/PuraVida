@@ -6,7 +6,7 @@ package ordenes;
 
 /**
  *
- * @author tatia
+ * @author Tatianan y Jocelyn
  */
 public class PagoTarjeta  implements Pago {
     private String numeroTarjeta;
