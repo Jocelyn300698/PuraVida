@@ -30,6 +30,6 @@ public class PagoTarjeta  implements Pago {
         }
         System.out.println("Pago con tarjeta aprobado por ₡" + monto 
                 + " para " + titular);
-        return true;
-    }
+        return true;
+    }
 }
