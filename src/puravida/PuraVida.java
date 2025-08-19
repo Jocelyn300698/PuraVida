@@ -1,4 +1,4 @@
-package puravida;
+/*package puravida;
 
 import conexion.ConexionBD;
 import java.sql.Connection;
@@ -29,3 +29,4 @@ public class PuraVida {
         }
     }
 }
+*/
