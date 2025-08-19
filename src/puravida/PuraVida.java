@@ -1,20 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package puravida;
 
-/**
- *
- * @author tatia
- */
-public class PuraVida {
+import conexion.ConexionBD;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
-    /**
-     * @param args the command line arguments
-     */
+public class PuraVida {
     public static void main(String[] args) {
-        // TODO code application logic here
-    // 
-    }  
+        try (Connection conn = ConexionBD.getConnection()) {
+            System.out.println("Conexión exitosa a la base de datos PuraVida.");
+
+            // Ejemplo: listar categorías
+            String sql = "SELECT id, nombre FROM puravida.categoria ORDER BY id";
+            try (Statement stmt = conn.createStatement();
+                 ResultSet rs = stmt.executeQuery(sql)) {
+
+                System.out.println("Listado de categorías:");
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String nombre = rs.getString("nombre");
+                    System.out.println(id + " - " + nombre);
+                }
+            }
+
+        } catch (Exception e) {
+            System.err.println("Error al conectar o consultar la base de datos:");
+            e.printStackTrace();
+        }
+    }
 }
