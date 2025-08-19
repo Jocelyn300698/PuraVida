@@ -15,6 +15,6 @@ public class PagoFactory {
             case "tarjeta":  return new PagoTarjeta();
             case "transferencia": return new PagoTransferencia();
             default: throw new Exception("Tipo de pago no soportado: " + tipo);
-        }
+        } //
     }
 }
