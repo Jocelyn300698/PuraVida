@@ -11,10 +11,15 @@ package ordenes;
 public class PagoFactory {
     public static Pago crearPago(String tipo) throws Exception {
         switch (tipo.toLowerCase()) {
-            case "efectivo": return new PagoEfectivo();
-            case "tarjeta":  return new PagoTarjeta();
-            case "transferencia": return new PagoTransferencia();
-            default: throw new Exception("Tipo de pago no soportado: " + tipo);
-        } //
+            case "efectivo":
+                return new PagoEfectivo();
+            case "tarjeta":
+                // Valores de prueba, en la UI real vendrían del usuario
+                return new PagoTarjeta("123456789012", "Cliente Demo", "12/28", "123");
+            case "transferencia":
+                return new PagoTransferencia("REF-987654", "Banco Nacional");
+            default:
+                throw new Exception("Tipo de pago no soportado: " + tipo);
+        }
     }
 }
